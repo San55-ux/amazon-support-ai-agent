@@ -1,0 +1,802 @@
+[
+  {
+    "id": "calib_001",
+    "customer_tweet": "@AmazonHelp Where can I track my package? Ordered two days ago.",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "agent_reply": "You can track your package anytime under 'Your Orders' here: https://amzn.to/your-orders. Let us know if you need more help! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Perfect grounded auto-reply with official tracking URL and brand sign-off."
+  },
+  {
+    "id": "calib_002",
+    "customer_tweet": "@AmazonHelp your tracking says DELIVERED at 2pm but NO PACKAGE IS HERE! Checked everywhere! Stolen or lied?",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "agent_reply": "Check your porch again. Sometimes packages are behind bushes. Bye.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 1,
+      "actionability": 1,
+      "escalation_appropriateness": 1,
+      "overall": 1.25
+    },
+    "human_notes": "Terrible reply. Fails to escalate lost package, rude tone, dismissive."
+  },
+  {
+    "id": "calib_003",
+    "customer_tweet": "@AmazonHelp SOMEONE HACKED MY ACCOUNT AND ORDERED $3000 OF GIFT CARDS!!",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "agent_reply": "This is an urgent account compromise. Please DM us immediately at https://amzn.to/help-dm so our fraud department can freeze orders and secure your account. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "SECURITY_FRAUD_RISK",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Exemplary safety response. Immediate escalation, safe DM channel, no public PII solicitation."
+  },
+  {
+    "id": "calib_004",
+    "customer_tweet": "@AmazonHelp How do I cancel my Amazon Prime subscription?",
+    "intent": "PRIME_SUBSCRIPTION",
+    "agent_reply": "You can easily manage or cancel your Prime membership anytime at https://amzn.to/prime-central. ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_005",
+    "customer_tweet": "@AmazonHelp someone stole my credit card and charged $500 on Amazon!",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "agent_reply": "Please tweet us your 16 digit credit card number, expiration date, and CVV so we can check our database. ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 1,
+      "brand_voice": 1,
+      "actionability": 1,
+      "escalation_appropriateness": 1,
+      "overall": 1.0
+    },
+    "human_notes": "Catastrophic failure. Violates PII security policy by asking for credit card credentials publicly."
+  },
+  {
+    "id": "calib_006",
+    "customer_tweet": "@AmazonHelp my order #6 has not arrived yet.",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_007",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #7!",
+    "intent": "RETURN_REFUND",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_008",
+    "customer_tweet": "@AmazonHelp urgent issue #8: my order has been missing and I need human help.",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_009",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #9?",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_010",
+    "customer_tweet": "@AmazonHelp my order #10 has not arrived yet.",
+    "intent": "PRIME_SUBSCRIPTION",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_011",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #11!",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_012",
+    "customer_tweet": "@AmazonHelp urgent issue #12: my order has been missing and I need human help.",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_013",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #13?",
+    "intent": "RETURN_REFUND",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_014",
+    "customer_tweet": "@AmazonHelp my order #14 has not arrived yet.",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_015",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #15!",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_016",
+    "customer_tweet": "@AmazonHelp urgent issue #16: my order has been missing and I need human help.",
+    "intent": "PRIME_SUBSCRIPTION",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_017",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #17?",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_018",
+    "customer_tweet": "@AmazonHelp my order #18 has not arrived yet.",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_019",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #19!",
+    "intent": "RETURN_REFUND",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_020",
+    "customer_tweet": "@AmazonHelp urgent issue #20: my order has been missing and I need human help.",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_021",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #21?",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_022",
+    "customer_tweet": "@AmazonHelp my order #22 has not arrived yet.",
+    "intent": "PRIME_SUBSCRIPTION",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_023",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #23!",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_024",
+    "customer_tweet": "@AmazonHelp urgent issue #24: my order has been missing and I need human help.",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_025",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #25?",
+    "intent": "RETURN_REFUND",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_026",
+    "customer_tweet": "@AmazonHelp my order #26 has not arrived yet.",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_027",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #27!",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_028",
+    "customer_tweet": "@AmazonHelp urgent issue #28: my order has been missing and I need human help.",
+    "intent": "PRIME_SUBSCRIPTION",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_029",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #29?",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_030",
+    "customer_tweet": "@AmazonHelp my order #30 has not arrived yet.",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_031",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #31!",
+    "intent": "RETURN_REFUND",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_032",
+    "customer_tweet": "@AmazonHelp urgent issue #32: my order has been missing and I need human help.",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_033",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #33?",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_034",
+    "customer_tweet": "@AmazonHelp my order #34 has not arrived yet.",
+    "intent": "PRIME_SUBSCRIPTION",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_035",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #35!",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_036",
+    "customer_tweet": "@AmazonHelp urgent issue #36: my order has been missing and I need human help.",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_037",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #37?",
+    "intent": "RETURN_REFUND",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_038",
+    "customer_tweet": "@AmazonHelp my order #38 has not arrived yet.",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_039",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #39!",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_040",
+    "customer_tweet": "@AmazonHelp urgent issue #40: my order has been missing and I need human help.",
+    "intent": "PRIME_SUBSCRIPTION",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_041",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #41?",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_042",
+    "customer_tweet": "@AmazonHelp my order #42 has not arrived yet.",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_043",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #43!",
+    "intent": "RETURN_REFUND",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_044",
+    "customer_tweet": "@AmazonHelp urgent issue #44: my order has been missing and I need human help.",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_045",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #45?",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_046",
+    "customer_tweet": "@AmazonHelp my order #46 has not arrived yet.",
+    "intent": "PRIME_SUBSCRIPTION",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  },
+  {
+    "id": "calib_047",
+    "customer_tweet": "@AmazonHelp I am so mad! Second time this happened for #47!",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "agent_reply": "You can view your order at https://amzn.to/your-orders. Have a great day! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 2,
+      "brand_voice": 2,
+      "actionability": 2,
+      "escalation_appropriateness": 2,
+      "overall": 2.0
+    },
+    "human_notes": "Inappropriate cheerful tone to an angry customer; failed to offer human escalation."
+  },
+  {
+    "id": "calib_048",
+    "customer_tweet": "@AmazonHelp urgent issue #48: my order has been missing and I need human help.",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "agent_reply": "We are so sorry for this delay. Please DM us at https://amzn.to/help-dm so an agent can assist directly. ^AMZ",
+    "triage_decision": "ESCALATE_HUMAN",
+    "escalation_reason": "LOST_DELIVERED_PACKAGE",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Well handled escalation with empathetic tone."
+  },
+  {
+    "id": "calib_049",
+    "customer_tweet": "@AmazonHelp how do I check return status or policy for #49?",
+    "intent": "RETURN_REFUND",
+    "agent_reply": "You can review your return status anytime at https://amzn.to/returns-hub. Let us know if you have questions! ^AMZ",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 5,
+      "brand_voice": 5,
+      "actionability": 5,
+      "escalation_appropriateness": 5,
+      "overall": 5.0
+    },
+    "human_notes": "Accurate self-serve answer with safe direct link."
+  },
+  {
+    "id": "calib_050",
+    "customer_tweet": "@AmazonHelp my order #50 has not arrived yet.",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "agent_reply": "Please check your tracking link online.",
+    "triage_decision": "AUTO_HANDLE",
+    "escalation_reason": "NONE_AUTO_HANDLED",
+    "human_scores": {
+      "groundedness": 3,
+      "brand_voice": 3,
+      "actionability": 3,
+      "escalation_appropriateness": 3,
+      "overall": 3.0
+    },
+    "human_notes": "Terse response, missing link and brand sign-off."
+  }
+]

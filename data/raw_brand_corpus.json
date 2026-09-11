@@ -1,0 +1,386 @@
+[
+  {
+    "id": "res_order_01",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "query_summary": "Package delayed past estimated delivery date",
+    "historical_reply": "I'm sorry to hear your order hasn't arrived on time! You can track live carrier updates and delivery status here: https://amzn.to/your-orders. Let us know if you need more help. ^AMZ",
+    "resolution_category": "tracking_link",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_order_02",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "query_summary": "Carrier marked parcel delivered but customer cannot find it",
+    "historical_reply": "We apologize for the worry! Carriers occasionally mark parcels delivered prematurely. Please check around your porch or with neighbors. If it still hasn't turned up, please DM us your details: https://amzn.to/help-dm. ^AMZ",
+    "resolution_category": "delivered_not_received",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_order_03",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "query_summary": "Customer asking when their package will ship",
+    "historical_reply": "You can check the dispatch date and real-time shipping progress directly under 'Your Orders': https://amzn.to/your-orders. Once shipped, tracking details will appear there immediately. ^AMZ",
+    "resolution_category": "dispatch_inquiry",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_order_04",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "query_summary": "Courier attempted delivery but customer was not home",
+    "historical_reply": "Carriers will typically re-attempt delivery on the next business day. You can also update your delivery instructions or reschedule via https://amzn.to/your-orders. ^AMZ",
+    "resolution_category": "missed_delivery",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_order_05",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "query_summary": "Package lost in transit for over a week",
+    "historical_reply": "We are very sorry for this extended delay. Since the package seems stalled in transit, please send us a direct message at https://amzn.to/help-dm so our fulfillment specialists can issue a replacement or refund right away. ^AMZ",
+    "resolution_category": "stalled_transit",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_order_06",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "query_summary": "Customer needs to change delivery address after dispatch",
+    "historical_reply": "Once an order has shipped, the delivery address cannot be edited online. Please reach out via secure DM: https://amzn.to/help-dm so we can review carrier interception options. ^AMZ",
+    "resolution_category": "address_change_transit",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_order_07",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "query_summary": "Customer wants Amazon Locker delivery code",
+    "historical_reply": "Your pickup code and barcode are emailed when the item is deposited at the Locker, and are also visible in the Amazon App under 'Your Orders': https://amzn.to/your-orders. ^AMZ",
+    "resolution_category": "locker_pickup",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_order_08",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "query_summary": "Carrier damaged front gate during delivery",
+    "historical_reply": "We take property safety very seriously. Please DM us at https://amzn.to/help-dm with your tracking details and photographs so our delivery leadership team can open an incident report immediately. ^AMZ",
+    "resolution_category": "carrier_incident_property",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_order_09",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "query_summary": "Delivery running slightly late due to weather",
+    "historical_reply": "Severe weather conditions can occasionally impact transit times. Please keep an eye on your live delivery map at https://amzn.to/your-orders for updated arrival windows. ^AMZ",
+    "resolution_category": "weather_delay",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_order_10",
+    "intent": "ORDER_STATUS_DELIVERY",
+    "query_summary": "Package delivered to wrong street or neighbor house",
+    "historical_reply": "I'm sorry your delivery was misdirected! Please DM us your order ID and address via https://amzn.to/help-dm so we can contact the local driver dispatch and resolve this immediately. ^AMZ",
+    "resolution_category": "misdelivered_wrong_address",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_ret_01",
+    "intent": "RETURN_REFUND",
+    "query_summary": "How to initiate a return and get return label",
+    "historical_reply": "Returns are easy! Head over to the Returns Center at https://amzn.to/returns-hub, select your item, and choose your preferred drop-off location (UPS, Kohl's, Whole Foods) for label-free returns. ^AMZ",
+    "resolution_category": "return_instructions",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_ret_02",
+    "intent": "RETURN_REFUND",
+    "query_summary": "Returned item delivered to warehouse but refund not received after 2 weeks",
+    "historical_reply": "We apologize for the wait on your refund. Please connect with our billing team via secure DM: https://amzn.to/help-dm with your return tracking number so we can release your funds manually. ^AMZ",
+    "resolution_category": "delayed_refund_investigation",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_ret_03",
+    "intent": "RETURN_REFUND",
+    "query_summary": "Standard refund processing timelines",
+    "historical_reply": "Once we receive your return, refunds are typically processed within 3 to 5 business days to your original payment method, or within 2-4 hours to an Amazon Gift Card balance: https://amzn.to/returns-hub. ^AMZ",
+    "resolution_category": "refund_timeline_faq",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_ret_04",
+    "intent": "RETURN_REFUND",
+    "query_summary": "Return window expired by a few days",
+    "historical_reply": "Standard return windows are typically 30 days from delivery. If you have extenuating circumstances, please DM us at https://amzn.to/help-dm so an agent can review your account for an exception. ^AMZ",
+    "resolution_category": "expired_return_window_review",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_ret_05",
+    "intent": "RETURN_REFUND",
+    "query_summary": "How to do label-free QR code drop-off",
+    "historical_reply": "For QR code returns, simply show the digital barcode generated in the Amazon App at any participating drop-off location (UPS Store, Whole Foods, or Kohl's) without printing a label: https://amzn.to/returns-hub. ^AMZ",
+    "resolution_category": "qr_code_dropoff",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_ret_06",
+    "intent": "RETURN_REFUND",
+    "query_summary": "Refund sent to closed bank account or cancelled credit card",
+    "historical_reply": "If a refund was issued to a closed card, banks generally route it to your new account or mail a check. Please DM us at https://amzn.to/help-dm with your ARN so our billing team can assist. ^AMZ",
+    "resolution_category": "refund_closed_account",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_ret_07",
+    "intent": "RETURN_REFUND",
+    "query_summary": "Return fee deducted unexpectedly from refund",
+    "historical_reply": "Return shipping is free for eligible items when using standard drop-offs. Please send a DM to https://amzn.to/help-dm so we can review the restocking/return deduction and correct any error. ^AMZ",
+    "resolution_category": "return_fee_dispute",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_ret_08",
+    "intent": "RETURN_REFUND",
+    "query_summary": "Customer wanting replacement instead of refund",
+    "historical_reply": "When initiating your return at https://amzn.to/returns-hub, you can select 'Replacement for same item' if stock is available, and a replacement order will be dispatched immediately. ^AMZ",
+    "resolution_category": "replacement_instructions",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_ret_09",
+    "intent": "RETURN_REFUND",
+    "query_summary": "International order return postage guidance",
+    "historical_reply": "For international returns, you may need to print commercial invoices and customs documentation. See detailed country instructions at https://amzn.to/returns-hub. ^AMZ",
+    "resolution_category": "international_return",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_ret_10",
+    "intent": "RETURN_REFUND",
+    "query_summary": "Wrong item was returned to Amazon by mistake",
+    "historical_reply": "If you inadvertently returned a personal item, please DM us immediately at https://amzn.to/help-dm with tracking information so our returns warehouse can be alerted. ^AMZ",
+    "resolution_category": "mistaken_return_item",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_dam_01",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "query_summary": "Received damaged or broken product in transit",
+    "historical_reply": "We are so sorry your item arrived damaged! You can request an immediate free replacement or refund without hassle here: https://amzn.to/returns-hub. ^AMZ",
+    "resolution_category": "damaged_replacement_flow",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_dam_02",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "query_summary": "High-value electronics item received completely smashed or opened",
+    "historical_reply": "I am terribly sorry for this unacceptable experience with your high-value order. Please DM us at https://amzn.to/help-dm so a senior specialist can open an expedited investigation and resolve this immediately. ^AMZ",
+    "resolution_category": "high_value_damage_escalation",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_dam_03",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "query_summary": "Received wrong item entirely (e.g. dog food instead of laptop)",
+    "historical_reply": "We apologize for the mix-up! Please send us a direct message at https://amzn.to/help-dm so we can verify the shipment barcode and arrange an urgent replacement for the correct item. ^AMZ",
+    "resolution_category": "wrong_item_mixup",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_dam_04",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "query_summary": "Item box missing power cord or vital accessory",
+    "historical_reply": "I apologize that your item was missing parts! You can request a replacement or return via https://amzn.to/returns-hub, or contact manufacturer warranty support. ^AMZ",
+    "resolution_category": "missing_parts",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_dam_05",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "query_summary": "Hazardous leaking chemical or broken glass injury risk",
+    "historical_reply": "Please ensure you handle the parcel safely. Please do NOT return broken glass or hazardous liquids. DM us immediately at https://amzn.to/help-dm so our safety team can process your refund right away. ^AMZ",
+    "resolution_category": "hazardous_broken_glass_safety",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_dam_06",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "query_summary": "Apparel received in wrong size or wrong color",
+    "historical_reply": "We are sorry for the clothing size discrepancy! You can swap it for the right size free of charge via https://amzn.to/returns-hub. ^AMZ",
+    "resolution_category": "apparel_size_swap",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_dam_07",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "query_summary": "Third-party seller item arrived damaged and seller is non-responsive",
+    "historical_reply": "If a marketplace seller is unresponsive regarding a damaged order, you are fully protected by our A-to-z Guarantee. Please DM us at https://amzn.to/help-dm so we can step in. ^AMZ",
+    "resolution_category": "a_to_z_guarantee_claim",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_dam_08",
+    "intent": "DAMAGED_WRONG_ITEM",
+    "query_summary": "Box arrived empty with factory seal broken",
+    "historical_reply": "An empty box is very concerning. Please DM us directly at https://amzn.to/help-dm so our asset protection team can initiate a carrier weight discrepancy check. ^AMZ",
+    "resolution_category": "empty_box_stolen_contents",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_sec_01",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "query_summary": "Unauthorized charge on customer credit card from Amazon",
+    "historical_reply": "Security is our highest priority. Please do NOT share card details publicly. Check for unknown orders or household members, and DM us immediately at https://amzn.to/help-dm so our fraud department can investigate. ^AMZ",
+    "resolution_category": "unauthorized_charge_fraud",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_sec_02",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "query_summary": "Account locked or suspended due to suspicious activity",
+    "historical_reply": "We want to help restore your account access safely. Please check your inbox for verification emails from our account specialists, or DM us at https://amzn.to/help-dm so we can assist. ^AMZ",
+    "resolution_category": "account_locked_suspicious",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_sec_03",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "query_summary": "How to update payment method or expired credit card",
+    "historical_reply": "You can safely manage your payment methods, credit cards, and billing addresses at any time under Your Account > Payments: https://amzn.to/your-orders. ^AMZ",
+    "resolution_category": "update_payment_faq",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_sec_04",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "query_summary": "Phishing text message or fake Amazon email inquiry",
+    "historical_reply": "Amazon will never ask for sensitive credentials via SMS. Please do not click any links. You can forward suspicious messages directly to stop-spoofing@amazon.com for our security team to review. ^AMZ",
+    "resolution_category": "phishing_spoofing_faq",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_sec_05",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "query_summary": "Two-factor authentication OTP not arriving",
+    "historical_reply": "If 2FA codes are delayed, please check your network or select 'Didn't receive OTP' to try email verification. If locked out, please DM us at https://amzn.to/help-dm so we can verify identity securely. ^AMZ",
+    "resolution_category": "two_factor_auth_lockout",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_sec_06",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "query_summary": "Customer account hacked and unauthorized orders placed",
+    "historical_reply": "This is urgent. Please disconnect compromised payment methods and send a direct message to https://amzn.to/help-dm immediately so our account security team can lock unauthorized orders. ^AMZ",
+    "resolution_category": "account_takeover_urgent",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_sec_07",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "query_summary": "Payment declined or bank authorization failed",
+    "historical_reply": "Payment declines are usually triggered by bank security filters or expired expiration dates. You can retry or select another card securely under 'Your Orders': https://amzn.to/your-orders. ^AMZ",
+    "resolution_category": "payment_declined_retry",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_sec_08",
+    "intent": "ACCOUNT_SECURITY_BILLING",
+    "query_summary": "Repeated unauthorized digital charge or Kindle subscription",
+    "historical_reply": "Please review active digital subscriptions under Your Memberships & Subscriptions. If an unfamiliar recurring charge persists, DM us at https://amzn.to/help-dm for a billing investigation. ^AMZ",
+    "resolution_category": "unfamiliar_digital_charge",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_prm_01",
+    "intent": "PRIME_SUBSCRIPTION",
+    "query_summary": "How to cancel Amazon Prime membership and request refund",
+    "historical_reply": "You can manage or cancel your Amazon Prime membership anytime at https://amzn.to/prime-central. If you have not utilized Prime benefits this billing period, an automatic refund will be offered during cancellation. ^AMZ",
+    "resolution_category": "prime_cancellation_flow",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_prm_02",
+    "intent": "PRIME_SUBSCRIPTION",
+    "query_summary": "Prime annual fee charged unexpectedly after free trial ended",
+    "historical_reply": "Free trials automatically transition into full memberships if not cancelled beforehand. You can cancel at https://amzn.to/prime-central for an automatic refund, or DM us at https://amzn.to/help-dm for support. ^AMZ",
+    "resolution_category": "prime_trial_renewal_refund",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_prm_03",
+    "intent": "PRIME_SUBSCRIPTION",
+    "query_summary": "Prime Video error code or streaming playback issue on Smart TV",
+    "historical_reply": "To resolve streaming issues, please restart the Prime Video app, ensure your device software is up-to-date, or deregister and reconnect your TV under Prime Video settings: https://amzn.to/prime-central. ^AMZ",
+    "resolution_category": "prime_video_troubleshooting",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_prm_04",
+    "intent": "PRIME_SUBSCRIPTION",
+    "query_summary": "Amazon Prime Student discount eligibility inquiry",
+    "historical_reply": "Prime Student provides 6 months at no cost followed by half-price Prime for eligible college students with a valid .edu email address. Sign up here: https://amzn.to/prime-central. ^AMZ",
+    "resolution_category": "prime_student_eligibility",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_prm_05",
+    "intent": "PRIME_SUBSCRIPTION",
+    "query_summary": "Double charged for Amazon Prime membership",
+    "historical_reply": "We apologize for the billing discrepancy! Please send us a direct message at https://amzn.to/help-dm with the charge dates so our Prime billing specialists can refund the duplicate charge. ^AMZ",
+    "resolution_category": "prime_double_charge",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_prm_06",
+    "intent": "PRIME_SUBSCRIPTION",
+    "query_summary": "Prime delivery benefits not applying at checkout",
+    "historical_reply": "Ensure the item you selected is marked 'Fulfilled by Amazon' or has the Prime badge. If Prime shipping is missing on eligible items, DM us at https://amzn.to/help-dm so we can review your account. ^AMZ",
+    "resolution_category": "prime_checkout_glitch",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_gen_01",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "query_summary": "How to check Amazon Gift Card balance or redeem code",
+    "historical_reply": "You can redeem your gift card and check your current gift card balance anytime by visiting: https://amzn.to/your-orders under 'Gift Card Balance'. ^AMZ",
+    "resolution_category": "gift_card_balance",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_gen_02",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "query_summary": "Customer inquiry regarding international shipping rates and customs",
+    "historical_reply": "Amazon delivers to over 100 countries! Estimated import fees, customs, and shipping rates are calculated dynamically at checkout: https://amzn.to/your-orders. ^AMZ",
+    "resolution_category": "international_shipping_faq",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_gen_03",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "query_summary": "Product out of stock / restock notification inquiry",
+    "historical_reply": "Restock timelines vary by supplier. You can sign up on the product detail page to receive an email alert as soon as the item is available again. ^AMZ",
+    "resolution_category": "product_restock_faq",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_gen_04",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "query_summary": "General feedback regarding excessive packaging and plastic waste",
+    "historical_reply": "Thank you for taking the time to share your feedback. We are actively working toward 100% recyclable packaging through our Frustration-Free Packaging initiative. ^AMZ",
+    "resolution_category": "sustainability_feedback",
+    "can_auto_handle": true
+  },
+  {
+    "id": "res_gen_05",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "query_summary": "Aggressive, abusive complaint threatening lawsuit or media leak",
+    "historical_reply": "We take your concerns seriously and want to assist you directly. Please send a direct message to https://amzn.to/help-dm so our executive customer relations team can review your account. ^AMZ",
+    "resolution_category": "escalated_executive_complaint",
+    "can_auto_handle": false
+  },
+  {
+    "id": "res_gen_06",
+    "intent": "GENERAL_INQUIRY_FEEDBACK",
+    "query_summary": "Incoherent or garbled message with lack of context",
+    "historical_reply": "Hello! We would love to help you. Could you please clarify your question or send us a DM at https://amzn.to/help-dm with your order details so we can assist? ^AMZ",
+    "resolution_category": "clarification_needed",
+    "can_auto_handle": false
+  }
+]
