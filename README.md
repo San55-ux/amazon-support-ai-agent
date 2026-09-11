@@ -180,9 +180,7 @@ amazon-support-ai-agent/
 │
 ├── app.py                             # Interactive Streamlit testing web application
 ├── run_eval.py                        # Single-command headline reproduction script (<60s)
-├── generate_html_report.py            # Compiles REPORT.md into standalone REPORT.html
-├── REPORT.md                          # Comprehensive 6-page evaluation report
-├── REPORT.html                        # Standalone styled HTML report (open in browser)
+├── REPORT.md                          # Comprehensive 6-page evaluation report                      
 ├── requirements.txt                   # Dependency manifest
 └── README.md                          # Quickstart, methodology, and submission guide
 ```
