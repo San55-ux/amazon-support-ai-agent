@@ -204,8 +204,3 @@ The report thoroughly addresses all assignment specifications:
 6. **Decision Log**: Detailed rationale for 12 non-obvious engineering decisions.
 
 ---
-
-## 📬 Submission
-
-- **Recipient:** `anurag@hiverhq.com`
-- **Deliverables Included:** Runnable pipeline, 200 hand-labelled golden set, evaluation harness with meta-evaluated LLM judge, automated test suite, interactive demo app, and the comprehensive report.
