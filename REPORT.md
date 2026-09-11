@@ -235,6 +235,3 @@ python -m pytest tests/ -v
 streamlit run app.py
 ```
 
-### Submission Details
-- **Recipient:** anurag@hiverhq.com
-- **Artifacts Included:** Complete source repository, 200-item golden evaluation set, 50-pair judge calibration set, evaluation harness, test suite, and this 6-page comprehensive research report.
