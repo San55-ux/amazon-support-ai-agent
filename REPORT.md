@@ -1,7 +1,6 @@
 # Engineering & Evaluation Report: Production-Grade Customer Support AI Agent for @AmazonHelp
 
-**Candidate Submission**  
-**Target Submission:** anurag@hiverhq.com  
+
 **Brand Evaluated:** Amazon Help (`@AmazonHelp`)  
 **Primary Dataset:** Real-world Customer Support on Twitter (Kaggle / Hugging Face `thoughtvector/customer-support-on-twitter`)  
 **Evaluation Set:** 200 Hand-Labelled Test Cases + 50 Human Calibration Pairs  
